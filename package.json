@@ -1,0 +1,18 @@
+{
+  "name": "sap.f.tutorial.fiori2.01",
+  "version": "1.0.0",
+  "author": "SAP SE",
+  "description": "Code: Flexible Column Layout App - Step 1 - Setting Up the Initial App",
+  "scripts": {
+    "start": "ui5 serve",
+    "build": "ui5 build"
+  },
+  "dependencies": {
+    "@openui5/themelib_sap_belize": "^1",
+    "@openui5/sap.m": "^1",
+    "@openui5/sap.ui.core": "^1"
+  },
+  "devDependencies": {
+    "@ui5/cli": "^2.0.0"
+  }
+}
