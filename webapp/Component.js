@@ -45,6 +45,7 @@ sap.ui.define(
               fioriLibrary.LayoutType.TwoColumnsMidExpanded,
             defaultThreeColumnLayoutType:
               fioriLibrary.LayoutType.ThreeColumnsMidExpanded,
+            initialColumnsCount: 2,
           };
           return FlexibleColumnLayoutSemanticHelper.getInstanceFor(
             oFCL,
