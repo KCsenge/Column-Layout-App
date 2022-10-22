@@ -61,12 +61,19 @@ sap.ui.define(
             .getSource()
             .getBindingContext("products")
             .getPath(),
-          product = productPath.split("/").slice(-1).pop();
-
-        this.oRouter.navTo("detail", {
-          layout: fioriLibrary.LayoutType.TwoColumnsMidExpanded,
-          product: product,
-        });
+          product = productPath.split("/").slice(-1).pop(),
+          oNextUIState;
+        this.getOwnerComponent()
+          .getHelper()
+          .then(
+            function (oHelper) {
+              oNextUIState = oHelper.getNextUIState(1);
+              this.oRouter.navTo("detail", {
+                layout: oNextUIState.layout,
+                product: product,
+              });
+            }.bind(this)
+          );
       },
     });
   }
